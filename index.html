@@ -6,9 +6,9 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <!-- SEO HEAD -->
-    <title id="meta-title">Cystenon™ – Support for Urinary Health | 50% Discount Today</title>
-    <meta name="description" id="meta-desc" content="Cystenon™: A natural formula designed to support urinary tract health. Get a 50% discount today with a 30-day money-back guarantee." />
-    <meta name="keywords" id="meta-keywords" content="Cystenon, urinary health, cystitis relief, natural supplement, Bulgaria, Croatia" />
+    <title>Cystenon – Естествена Подкрепа За Комфорта На Пикочните Пътища | 50% Отстъпка</title>
+    <meta name="description" content="Cystenon: Модерна формула с растителни съставки за подкрепа на пикочната система и естествения баланс на организма." />
+    <meta name="keywords" content="Cystenon, пикочни пътища, комфорт, натурална добавка, България, Хърватия" />
     <meta name="robots" content="index,follow" />
 
     <!-- Assets de UI -->
@@ -32,11 +32,10 @@
             align-items: center; 
         }
         
-        /* Overlay para garantir legibilidade sobre a imagem de fundo */
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.5) 100%);
             z-index: 1;
         }
 
@@ -45,15 +44,11 @@
         .reveal.active { opacity: 1; transform: translateY(0); }
         
         .glass-panel {
-            background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.9);
         }
-        .modal-open { overflow: hidden; }
         
-        /* Branding Azul Médico */
         .brand-bg { background-color: #0284c7; }
-        .brand-text { color: #0369a1; }
-        .brand-border { border-color: #0284c7; }
         
         .btn-shine {
             position: relative;
@@ -70,31 +65,38 @@
             transform: rotate(45deg);
             transition: 0.5s;
         }
-        .btn-shine:hover::after {
-            left: 100%;
-            top: 100%;
+        .btn-shine:hover::after { left: 100%; top: 100%; }
+
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
         }
     </style>
 </head>
 <body class="text-gray-800 relative">
 
+    <!-- Header -->
     <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 shadow-sm border-b border-gray-100">
         <div class="container mx-auto flex justify-between items-center p-4 px-6">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 brand-bg rounded-lg flex items-center justify-center">
+                <div class="w-8 h-8 brand-bg rounded-lg flex items-center justify-center shadow-lg shadow-sky-200">
                     <i data-feather="shield" class="text-white w-5 h-5"></i>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-gray-900">Cystenon<span class="text-sky-600">™</span></span>
+                <span class="text-xl font-bold tracking-tight text-gray-900">Cystenon</span>
             </div>
-            <div class="hidden md:flex gap-4 items-center">
-                <span class="text-xs font-bold text-green-600 flex items-center gap-1">
-                    <span class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span> IN STOCK
+            <div class="flex gap-4 items-center">
+                <span class="text-[10px] md:text-xs font-bold text-green-600 flex items-center gap-1 bg-green-50 px-3 py-1 rounded-full border border-green-100">
+                    <span class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span> В НАЛИЧНОСТ
                 </span>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="order" class="hero-section-bg" aria-label="Order Section">
             <div class="hero-overlay"></div>
             
@@ -103,10 +105,9 @@
                     
                     <div class="text-center md:text-left reveal flex flex-col items-center md:items-start">
                         
-                        <!-- Rating & Badge -->
-                        <div class="glass-panel rounded-full px-5 py-2 mb-8 inline-flex items-center gap-3 shadow-sm mx-auto md:mx-0">
+                        <!-- Social Proof Badge -->
+                        <div class="glass-panel rounded-full px-5 py-2 mb-8 inline-flex items-center gap-3 shadow-md mx-auto md:mx-0 border-sky-100">
                             <div class="flex items-center gap-1">
-                                <span class="font-bold text-sm">4.9/5</span>
                                 <div class="flex items-center">
                                     <i class="star-filled w-4 h-4" data-feather="star"></i>
                                     <i class="star-filled w-4 h-4" data-feather="star"></i>
@@ -116,86 +117,102 @@
                                 </div>
                             </div>
                             <div class="w-px h-4 bg-gray-300"></div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-sky-700" data-i18n="offer">SAVE 50% TODAY</span>
+                            <span class="text-xs font-bold text-gray-700">⭐ 4.9 / 5 Оценка От Клиенти</span>
                         </div>
 
-                        <!-- MAIN TITLE -->
-                        <h1 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-[1.1] tracking-tight text-gray-900" data-i18n="h1">
-                            Natural Support<br> for your <span class="text-sky-600">Urinary Tract</span>
+                        <!-- HEADLINE -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-[1.15] tracking-tight text-gray-900">
+                            Естествена Подкрепа За <span class="text-sky-600">Комфорта</span> На Пикочните Пътища
                         </h1>
                         
-                        <!-- SUBTITLE -->
-                        <p class="text-lg md:text-xl mb-10 text-gray-600 leading-relaxed max-w-lg" data-i18n="p-hero">
-                            Advanced formula designed to promote comfort, health, and protection. Regain your confidence with the power of nature.
-                        </p>
+                        <!-- SUBHEADLINE -->
+                        <div class="space-y-4 mb-10">
+                            <p class="text-lg md:text-xl text-gray-700 font-semibold leading-relaxed max-w-lg">
+                                Подкрепете ежедневния комфорт на пикочната система с модерна формула от растителни съставки.
+                            </p>
+                            <p class="text-base md:text-lg text-gray-500 leading-relaxed max-w-lg">
+                                Формула, разработена да подпомага нормалната функция на пикочните пътища и да поддържа естествения баланс на организма.
+                            </p>
+                        </div>
                         
                         <!-- BENEFITS LIST -->
-                        <div class="w-full max-w-md space-y-4 mb-10 text-left">
-                            <div class="flex items-center gap-3 group">
-                                <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 transition-colors group-hover:bg-sky-600 group-hover:text-white">
-                                    <i data-feather="check-circle" class="w-5 h-5"></i>
-                                </div>
-                                <span class="font-semibold text-gray-700" data-i18n="list-1">Fast-acting natural relief</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mb-10">
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/50 border border-white/50">
+                                <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
+                                <span class="font-medium text-gray-700 text-sm md:text-base">Подпомага комфорта на пикочния мехур</span>
                             </div>
-                            <div class="flex items-center gap-3 group">
-                                <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 transition-colors group-hover:bg-sky-600 group-hover:text-white">
-                                    <i data-feather="shield" class="w-5 h-5"></i>
-                                </div>
-                                <span class="font-semibold text-gray-700" data-i18n="list-2">Protective herbal barrier</span>
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/50 border border-white/50">
+                                <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
+                                <span class="font-medium text-gray-700 text-sm md:text-base">Подкрепя естествената защита</span>
                             </div>
-                            <div class="flex items-center gap-3 group">
-                                <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 transition-colors group-hover:bg-sky-600 group-hover:text-white">
-                                    <i data-feather="award" class="w-5 h-5"></i>
-                                </div>
-                                <span class="font-semibold text-gray-700" data-i18n="list-3">30-day satisfaction guarantee</span>
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/50 border border-white/50">
+                                <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
+                                <span class="font-medium text-gray-700 text-sm md:text-base">Формула с растителни съставки</span>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/50 border border-white/50">
+                                <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
+                                <span class="font-medium text-gray-700 text-sm md:text-base">Подходяща за ежедневна употреба</span>
+                            </div>
+                        </div>
+
+                        <!-- Trust Elements Below List -->
+                        <div class="flex flex-wrap gap-6 justify-center md:justify-start opacity-70">
+                            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+                                <i data-feather="truck" class="w-4 h-4 text-sky-600"></i> Бърза доставка
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+                                <i data-feather="package" class="w-4 h-4 text-sky-600"></i> Дискретна опаковка
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+                                <i data-feather="credit-card" class="w-4 h-4 text-sky-600"></i> Плащане при доставка
                             </div>
                         </div>
                     </div>
 
-                    <!-- Side Panel: Image and Country Selection -->
+                    <!-- Side Panel: CTA and Product -->
                     <div class="reveal">
-                        <div class="bg-white/90 backdrop-blur-md rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-sky-900/20 border border-white relative">
+                        <div class="bg-white/95 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-sky-900/10 border border-sky-50 relative overflow-hidden">
                             <!-- Discount Badge -->
-                            <div class="absolute -top-6 -right-6 w-24 h-24 brand-bg rounded-full flex flex-col items-center justify-center text-white shadow-xl rotate-12">
-                                <span class="text-xs font-bold uppercase">Save</span>
-                                <span class="text-2xl font-black">50%</span>
+                            <div class="absolute -top-4 -right-4 w-28 h-28 brand-bg rounded-full flex flex-col items-center justify-center text-white shadow-xl rotate-12 z-20">
+                                <span class="text-[10px] font-bold uppercase tracking-tighter">ОТСТЪПКА</span>
+                                <span class="text-3xl font-black">50%</span>
                             </div>
 
-                            <div class="flex justify-center mb-8">
+                            <div class="flex justify-center mb-6">
                                 <div class="relative">
                                     <div class="absolute inset-0 bg-sky-400 blur-3xl opacity-10 rounded-full"></div>
-                                    <!-- Imagem do Produto Cystenon -->
-                                    <img src="images/cystenon.png" alt="Cystenon Product" class="relative w-full max-w-[300px] h-auto drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/350x450/0284c7/FFFFFF?text=CYSTENON+PRO'">
+                                    <img src="images/cystenon.png" alt="Cystenon Product" class="relative w-full max-w-[280px] h-auto drop-shadow-2xl">
                                 </div>
                             </div>
 
-                            <div class="space-y-6">
+                            <div class="space-y-6 relative z-10">
                                 <div class="text-center">
-                                    <p class="font-bold text-gray-400 uppercase tracking-widest text-[10px] mb-4" data-i18n="choose">Select your delivery country:</p>
+                                    <h3 class="text-xl font-extrabold text-gray-900 mb-2">Поръчайте Сега С Отстъпка</h3>
+                                    <p class="text-xs text-sky-600 font-bold uppercase tracking-widest">Ограничена промоция за България</p>
+                                </div>
+
+                                <div class="bg-sky-50 rounded-2xl p-4 border border-sky-100 mb-4">
+                                    <p class="text-xs text-gray-600 text-center leading-relaxed">
+                                        Повече от <strong>2 000 000 потребители</strong> вече са избрали Cystenon като част от своята ежедневна грижа.
+                                    </p>
                                 </div>
                                 
                                 <div class="grid grid-cols-1 gap-4">
-                                    <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg shadow-sky-200 group">
+                                    <div class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Изберете държава за доставка:</div>
+                                    
+                                    <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg shadow-sky-100 group">
                                         <div class="flex items-center gap-4">
-                                            <span class="text-2xl">🇧🇬</span>
-                                            <span class="font-bold text-lg" data-i18n="country-bulgaria">Bulgaria</span>
+                                            <span class="font-bold text-lg">България</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
 
-                                    <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg shadow-sky-200 group">
+                                    <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-between bg-gray-800 hover:bg-black text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4">
-                                            <span class="text-2xl">🇭🇷</span>
-                                            <span class="font-bold text-lg" data-i18n="country-croatia">Croatia</span>
+                                            <span class="font-bold text-lg">Хърватия</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
-                                </div>
-
-                                <div class="flex items-center justify-center gap-4 pt-4 opacity-50">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" class="h-6" alt="Visa">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/349/349228.png" class="h-6" alt="Mastercard">
-                                    <i data-feather="truck" class="w-5 h-5"></i>
                                 </div>
                             </div>
                         </div>
@@ -203,41 +220,80 @@
                 </div>
             </div>
         </section>
+
+        <!-- Google Safe Benefit Section -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Как Може Да Ви Помогне Cystenon</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 benefit-card">
+                            <div class="w-12 h-12 brand-bg/10 rounded-2xl flex items-center justify-center mb-6">
+                                <i data-feather="activity" class="text-sky-600 w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Натурална Формула</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Cystenon съдържа комбинация от растителни съставки, които традиционно се използват за подкрепа на нормалната функция на пикочните пътища.
+                            </p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 benefit-card">
+                            <div class="w-12 h-12 brand-bg/10 rounded-2xl flex items-center justify-center mb-6">
+                                <i data-feather="refresh-cw" class="text-sky-600 w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Ежедневен Баланс</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Формулата е създадена за хора, които искат да поддържат ежедневен комфорт и баланс чрез силата на фитонутриентите.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-12 p-6 bg-sky-50 rounded-2xl inline-block">
+                        <p class="text-sky-800 font-medium text-sm">
+                            Хиляди потребители в Европа вече използват Cystenon като част от своята ежедневна грижа.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
             <div class="flex items-center justify-center gap-2 mb-8">
                 <div class="w-6 h-6 brand-bg rounded flex items-center justify-center">
                     <i data-feather="shield" class="text-white w-4 h-4"></i>
                 </div>
-                <span class="text-white font-bold tracking-tight">Cystenon<span class="text-sky-400">™</span></span>
+                <span class="text-white font-bold tracking-tight">Cystenon</span>
             </div>
 
             <div class="flex justify-center flex-wrap gap-6 md:gap-12 mb-12 text-xs font-bold uppercase tracking-widest text-gray-500">
-                <button onclick="openModal('terms')" class="hover:text-sky-400 transition-colors" data-i18n="btn-terms">Terms of Sale</button>
-                <button onclick="openModal('privacy')" class="hover:text-sky-400 transition-colors" data-i18n="btn-privacy">Privacy Policy</button>
-                <button onclick="openModal('shipping')" class="hover:text-sky-400 transition-colors" data-i18n="btn-shipping">Shipping</button>
-                <button onclick="openModal('returns')" class="hover:text-sky-400 transition-colors" data-i18n="btn-returns">Returns</button>
+                <button onclick="openModal('terms')" class="hover:text-sky-400 transition-colors">Общи условия</button>
+                <button onclick="openModal('privacy')" class="hover:text-sky-400 transition-colors">Поверителност</button>
+                <button onclick="openModal('shipping')" class="hover:text-sky-400 transition-colors">Доставка</button>
+                <button onclick="openModal('returns')" class="hover:text-sky-400 transition-colors">Връщане</button>
             </div>
 
             <div class="max-w-2xl mx-auto space-y-6 text-[11px] leading-relaxed text-gray-500">
-                <p data-i18n="footer-disclaimer-1">This product is a dietary supplement and not intended to diagnose, treat, cure, or prevent any disease. Always consult with a healthcare professional before starting any new supplement regimen.</p>
-                <p data-i18n="footer-disclaimer-2">&copy; 2026 Cystenon™ Global Labs. All rights reserved. Distributed by Fonslife Trading FZCO.</p>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5 mb-4">
+                    <p class="text-gray-400 font-bold uppercase mb-2">ВАЖНО УТОЧНЕНИЕ (COMPLIANCE):</p>
+                    <p class="mb-2">Този продукт е хранителна добавка.</p>
+                    <p>Не е предназначен за диагностика, лечение или предотвратяване на заболявания. Резултатите могат да варират при отделните потребители.</p>
+                </div>
+                <p>&copy; 2026 Cystenon Global Labs. Всички права запазени. Дистрибутирано от Fonslife Trading FZCO.</p>
             </div>
         </div>
     </footer>
 
     <!-- MODAL -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-gray-900/90 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        <div class="fixed inset-0 bg-gray-900/95 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl max-h-[85vh] flex flex-col">
                     <div class="bg-white px-8 py-6 border-b border-gray-100 flex justify-between items-center sticky top-0 z-20">
-                        <h3 class="text-xl font-bold text-gray-900" id="modal-title">Legal Details</h3>
+                        <h3 class="text-xl font-bold text-gray-900" id="modal-title">Правна Информация</h3>
                         <button type="button" onclick="closeModal()" class="rounded-full p-2 hover:bg-gray-100 transition-colors">
-                            <i data-feather="x" class="h-5 w-5"></i>
+                            <i data-feather="x" class="h-5 v-5"></i>
                         </button>
                     </div>
                     <div class="bg-white px-8 py-8 overflow-y-auto">
@@ -263,27 +319,84 @@
         window.addEventListener("load", reveal);
         reveal();
 
-        // Modals Logic
+        // TRANSLATIONS
+        const translations = {
+            bulgaria: {
+                title: "Cystenon – Подкрепа за уринарния тракт | 50% Отстъпка Днес",
+                desc: "Cystenon: Натурална формула за здравето на уринарния тракт. Вземете 50% отстъпка днес.",
+                offer: "СПЕСТЕТЕ 50% ДНЕС",
+                h1: "Натурална подкрепа<br> за вашия <span class='text-sky-600'>уринарен тракт</span>",
+                "p-hero": "Усъвършенствана формула, създадена за комфорт, здраве и защита. Върнете си увереността със силата на природата.",
+                "list-1": "Бързодействащо естествено облекчение",
+                "list-2": "Защитна билкова бариера",
+                "list-3": "30-дневна гаранция за удовлетвореност",
+                choose: "Изберете вашата държава:",
+                "country-bulgaria": "България",
+                "country-croatia": "Хърватия",
+                "btn-terms": "Общи условия",
+                "btn-privacy": "Поверителност",
+                "btn-shipping": "Доставка",
+                "btn-returns": "Връщане",
+                "footer-disclaimer-1": "Този продукт е хранителна добавка и не е предназначен за диагностициране, лечение или предотвратяване на заболявания.",
+                "footer-disclaimer-2": "© 2026 Cystenon Global Labs. Всички права запазени."
+            },
+            croatia: {
+                title: "Cystenon – Podrška za zdravlje mokraćnog sustava | 50% Popusta Danas",
+                desc: "Cystenon: Prirodna formula dizajnirana za potporu zdravlju mokraćnog sustava. Iskoristite 50% popusta danas.",
+                offer: "UŠTEDITE 50% DANAS",
+                h1: "Prirodna podrška<br> za vaš <span class='text-sky-600'>mokraćni sustav</span>",
+                "p-hero": "Napredna formula dizajnirana za promicanje udobnosti, zdravlja i zaštite. Vratite svoje samopouzdanje snagom prirode.",
+                "list-1": "Brzo djelovanje i prirodno olakšanje",
+                "list-2": "Zaštitna biljna barijera",
+                "list-3": "30-dnevno jamstvo zadovoljstva",
+                choose: "Odaberite svoju državu:",
+                "country-bulgaria": "Bugarska",
+                "country-croatia": "Hrvatska",
+                "btn-terms": "Uvjeti prodaje",
+                "btn-privacy": "Politika privatnosti",
+                "btn-shipping": "Dostava",
+                "btn-returns": "Povrati",
+                "footer-disclaimer-1": "Ovaj proizvod je dodatak prehrani i nije namijenjen dijagnosticiranju, liječenju ili prevenciji bilo koje bolesti.",
+                "footer-disclaimer-2": "© 2026 Cystenon Global Labs. Sva prava pridržana."
+            }
+        };
+
+        // Manual translation function
+        function applyTranslation(langKey) {
+            const dict = translations[langKey];
+            if (!dict) return;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) { el.innerHTML = dict[key]; }
+            });
+            
+            if (dict.title) document.title = dict.title;
+            if (dict.desc) document.querySelector('meta[name="description"]').setAttribute('content', dict.desc);
+            document.documentElement.lang = 'en'; // Keep tech default as English
+        }
+
+        // Logic for Modals
         const modal = document.getElementById('policy-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalContent = document.getElementById('modal-content-area');
 
         const modalData = {
             terms: {
-                title: "TERMS OF SALE",
-                content: `<p>By purchasing Cystenon™, you agree to our standard terms of service. Products are intended for personal use only. We reserve the right to limit quantities.</p>`
+                title: "Общи условия за продажба",
+                content: `<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване. Продуктите са предназначени само за лична употреба. Запазваме си правото да ограничаваме количествата.</p>`
             },
             privacy: {
-                title: "PRIVACY POLICY",
-                content: `<p>We protect your data with SSL encryption. Your information is used only for order processing and delivery purposes. We never sell your data to third parties.</p>`
+                title: "Политика за поверителност",
+                content: `<p>Ние защитаваме Вашите данни с SSL криптиране. Вашата информация се използва само за обработка на поръчки и цели на доставка. Никога не продаваме Вашите данни на трети страни.</p>`
             },
             shipping: {
-                title: "SHIPPING INFORMATION",
-                content: `<p>Delivery to Bulgaria and Croatia typically takes 2-4 business days. Tracking numbers are provided via email once the order is dispatched.</p>`
+                title: "Информация за доставка",
+                content: `<p>Доставката до България и Хърватия обикновено отнема 2-4 работни дни. Номерата за проследяване се предоставят по имейл, след като поръчката бъде изпратена.</p>`
             },
             returns: {
-                title: "RETURN POLICY",
-                content: `<p>We offer a 30-day money-back guarantee. If you are not satisfied with Cystenon™, contact our support for a full refund of the purchase price.</p>`
+                title: "Политика за връщане",
+                content: `<p>Предлагаме 30-дневна гаранция за удовлетвореност. Ако не сте доволни от Cystenon, свържете се с нашата поддръжка за пълно възстановяване на сумата от покупната цена.</p>`
             }
         };
 
