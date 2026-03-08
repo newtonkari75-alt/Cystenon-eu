@@ -90,13 +90,13 @@
             box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
         }
 
-        /* Estilo para o selo de desconto (sem cortes) */
+        /* Discount badge styling */
         .discount-badge {
             position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 100px;
-            height: 100px;
+            top: -25px;
+            right: -25px;
+            width: 110px;
+            height: 110px;
             background-color: #0284c7;
             border-radius: 9999px;
             display: flex;
@@ -205,10 +205,10 @@
                         </div>
                     </div>
 
-                    <!-- Side Panel: CTA and Product (Removed overflow-hidden and border) -->
+                    <!-- Side Panel: CTA and Product -->
                     <div class="reveal relative">
                         <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-gray-900/10 relative">
-                            <!-- Discount Badge (Corrected position) -->
+                            <!-- Discount Badge -->
                             <div class="discount-badge">
                                 <span class="text-[10px] font-bold uppercase tracking-tighter">ОТСТЪПКА</span>
                                 <span class="text-3xl font-black">50%</span>
@@ -217,7 +217,7 @@
                             <div class="flex justify-center mb-10">
                                 <div class="relative">
                                     <div class="absolute inset-0 bg-sky-400 blur-3xl opacity-10 rounded-full"></div>
-                                    <img src="images/cystenon.png" alt="Cystenon Product" class="relative w-full max-w-[280px] h-auto drop-shadow-2xl">
+                                    <img src="images/cystenon.png" alt="Продукт Cystenon" class="relative w-full max-w-[280px] h-auto drop-shadow-2xl">
                                 </div>
                             </div>
 
@@ -225,19 +225,19 @@
                                 <div class="grid grid-cols-1 gap-4">
                                     <div class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">ИЗБЕРЕТЕ ДЪРЖАВА ЗА ДОСТАВКА:</div>
                                     
-                                    <!-- Bulgaria Button (Sigla removida, apenas bandeira) -->
+                                    <!-- Bulgaria Button -->
                                     <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
-                                            <span class="text-2xl">🇧🇬</span>
+                                            <span class="text-3xl">🇧🇬</span>
                                             <span class="font-bold text-lg uppercase tracking-wide">България</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
 
-                                    <!-- Croatia Button (Sigla removida, apenas bandeira) -->
+                                    <!-- Croatia Button -->
                                     <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-between bg-gray-800 hover:bg-black text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
-                                            <span class="text-2xl">🇭🇷</span>
+                                            <span class="text-3xl">🇭🇷</span>
                                             <span class="font-bold text-lg uppercase tracking-wide">Хърватия</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
@@ -245,41 +245,12 @@
                                 </div>
 
                                 <!-- Social Proof Text -->
-                                <div class="bg-sky-50/50 rounded-2xl p-4 border border-sky-100/30 mt-4">
-                                    <p class="text-[11px] md:text-xs text-gray-600 text-center leading-relaxed font-medium">
+                                <div class="bg-sky-50/50 rounded-2xl p-4 border border-sky-100/30 mt-4 text-center">
+                                    <p class="text-[11px] md:text-xs text-gray-600 leading-relaxed font-medium">
                                         Повече от <strong>2 000 000 потребители</strong> вече са избрали Cystenon като част от своята ежедневна грижа.
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Google Safe Benefit Section -->
-        <section class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center reveal">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Как Може Да Ви Помогне Cystenon</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 benefit-card">
-                            <div class="w-12 h-12 brand-bg/10 rounded-2xl flex items-center justify-center mb-6">
-                                <i data-feather="activity" class="text-sky-600 w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4">Намаляване на Дискомфорта</h3>
-                            <p class="text-gray-600 leading-relaxed text-sm">
-                                Cystenon съдържа комбинация от растителни съставки, които традиционно се използват за подкрепа на организма при парене и дискомфорт в пикочните пътища.
-                            </p>
-                        </div>
-                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 benefit-card">
-                            <div class="w-12 h-12 brand-bg/10 rounded-2xl flex items-center justify-center mb-6">
-                                <i data-feather="refresh-cw" class="text-sky-600 w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4">Ежедневен Баланс</h3>
-                            <p class="text-gray-600 leading-relaxed text-sm">
-                                Формулата е създадена за хора, които искат да се справят с честото уриниране и да поддържат ежедневен комфорт чрез силата на фитонутриентите.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -310,7 +281,7 @@
                     <p class="mb-2">Този продукт е хранителна добавка.</p>
                     <p>Не е предназначен за диагностика, лечение или предотвратяване на заболявания.</p>
                 </div>
-                <p>&copy; 2026 Cystenon Global Labs. All rights reserved.</p>
+                <p>&copy; 2026 Cystenon Global Labs. All rights reserved. Distributed by Fonslife Trading FZCO.</p>
             </div>
         </div>
     </footer>
@@ -320,7 +291,7 @@
         <div class="fixed inset-0 bg-gray-900/95 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl max-h-[85vh] flex flex-col">
+                <div class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-h-[85vh] flex flex-col">
                     <div class="bg-white px-8 py-6 border-b border-gray-100 flex justify-between items-center sticky top-0 z-20">
                         <h3 class="text-xl font-bold text-gray-900" id="modal-title">Правна Информация</h3>
                         <button type="button" onclick="closeModal()" class="rounded-full p-2 hover:bg-gray-100 transition-colors">
@@ -357,19 +328,19 @@
         const modalData = {
             terms: {
                 title: "Общи условия за продажба",
-                content: `<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване.</p>`
+                content: `<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване. Продуктите са предназначени само за лична употреба.</p>`
             },
             privacy: {
                 title: "Политика за поверителност",
-                content: `<p>Ние защитаваме Вашите данни с SSL криптиране.</p>`
+                content: `<p>Ние защитаваме Вашите данни с SSL криптиране. Вашата информация се използва само за обработка на поръчки и доставка.</p>`
             },
             shipping: {
                 title: "Информация за доставка",
-                content: `<p>Доставката до България и Хърватия обикновено отнема 2-4 работни дни.</p>`
+                content: `<p>Доставката обикновено отнема 2-4 работни дни. Ще получите номер за проследяване по имейл.</p>`
             },
             returns: {
                 title: "Политика за връщане",
-                content: `<p>Предлагаме 30-дневна гаранция за удовлетвореност.</p>`
+                content: `<p>Предлагаме 30-дневна гаранция за удовлетвореност. Свържете се с поддръжката за подробности относно връщането.</p>`
             }
         };
 
