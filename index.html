@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -82,13 +82,21 @@
         }
         .btn-shine:hover::after { left: 100%; top: 100%; }
 
-        /* Selo de desconto ajustado para não cortar */
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
+        }
+
+        /* Discount badge styling */
         .discount-badge {
             position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 100px;
-            height: 100px;
+            top: -25px;
+            right: -25px;
+            width: 110px;
+            height: 110px;
             background-color: #0284c7;
             border-radius: 9999px;
             display: flex;
@@ -99,14 +107,6 @@
             box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4);
             z-index: 50;
             transform: rotate(12deg);
-        }
-
-        .benefit-card {
-            transition: all 0.3s ease;
-        }
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
         }
     </style>
 </head>
@@ -159,7 +159,7 @@
                             Естествена Подкрепа За <span class="text-sky-600">Комфорта</span> На Пикочните Пътища
                         </h1>
                         
-                        <!-- SUBHEADLINE - IMPROVED PHRASING -->
+                        <!-- SUBHEADLINE -->
                         <div class="space-y-4 mb-10">
                             <p class="text-lg md:text-xl text-gray-700 font-bold leading-relaxed max-w-lg">
                                 Подкрепете Ежедневния Комфорт На Пикочните Пътища С Модерна Формула От Растителни Съставки.
@@ -207,9 +207,8 @@
 
                     <!-- Side Panel: CTA and Product -->
                     <div class="reveal relative">
-                        <!-- Painel sem borda branca desnecessária -->
                         <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-gray-900/10 relative">
-                            <!-- Discount Badge (Corrigido para não ser cortado) -->
+                            <!-- Discount Badge -->
                             <div class="discount-badge">
                                 <span class="text-[10px] font-bold uppercase tracking-tighter">ОТСТЪПКА</span>
                                 <span class="text-3xl font-black">50%</span>
@@ -226,7 +225,7 @@
                                 <div class="grid grid-cols-1 gap-4">
                                     <div class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">ИЗБЕРЕТЕ ДЪРЖАВА ЗА ДОСТАВКА:</div>
                                     
-                                    <!-- Bulgaria Button (Siglas removidas) -->
+                                    <!-- Bulgaria Button -->
                                     <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
                                             <span class="text-3xl">🇧🇬</span>
@@ -235,7 +234,7 @@
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
 
-                                    <!-- Croatia Button (Siglas removidas) -->
+                                    <!-- Croatia Button -->
                                     <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-between bg-gray-800 hover:bg-black text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
                                             <span class="text-3xl">🇭🇷</span>
@@ -245,7 +244,7 @@
                                     </a>
                                 </div>
 
-                                <!-- Social Proof Text -->
+                                <!-- Social Proof Text After Buttons -->
                                 <div class="bg-sky-50/50 rounded-2xl p-4 border border-sky-100/30 mt-4 text-center">
                                     <p class="text-[11px] md:text-xs text-gray-600 leading-relaxed font-medium">
                                         Повече от <strong>2 000 000 потребители</strong> вече са избрали Cystenon като част от своята ежедневна грижа.
@@ -262,11 +261,17 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
-            <div class="flex items-center justify-center gap-2 mb-8">
+            <div class="flex items-center justify-center gap-2 mb-4">
                 <div class="w-6 h-6 brand-bg rounded flex items-center justify-center">
                     <i data-feather="shield" class="text-white w-4 h-4"></i>
                 </div>
                 <span class="text-white font-bold tracking-tight">Cystenon</span>
+            </div>
+
+            <!-- Distributor Badge -->
+            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-8">
+                <i data-feather="check-circle" class="w-3 h-3 text-sky-400"></i>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-100">Оторизиран глобален дистрибутор</span>
             </div>
 
             <div class="flex justify-center flex-wrap gap-6 md:gap-12 mb-12 text-xs font-bold uppercase tracking-widest text-gray-500">
@@ -282,7 +287,10 @@
                     <p class="mb-2">Този продукт е хранителна добавка.</p>
                     <p>Не е предназначен за диагностика, лечение или предотвратяване на заболявания.</p>
                 </div>
-                <p>&copy; 2026 Cystenon Global Labs. All rights reserved.</p>
+                <div class="opacity-80">
+                    <p>© 2026 Cystenon Global Labs. Всички права запазени. Дистрибутирано от Fonslife Trading FZCO.</p>
+                    <p class="mt-1">Ние сме оторизиран дистрибутор на марката Cystenon.</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -329,11 +337,11 @@
         const modalData = {
             terms: {
                 title: "Общи условия за продажба",
-                content: `<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване.</p>`
+                content: `<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване. Продуктите са предназначени само за лична употреба.</p>`
             },
             privacy: {
                 title: "Политика за поверителност",
-                content: `<p>Ние защитаваме Вашите данни с SSL криптиране.</p>`
+                content: `<p>Ние защитаваме Вашите данни с SSL криптиране. Вашата информация се използва само за обработка на поръчки и доставка.</p>`
             },
             shipping: {
                 title: "Информация за доставка",
