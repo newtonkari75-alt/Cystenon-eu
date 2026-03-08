@@ -23,7 +23,7 @@
     <!-- SEO HEAD -->
     <title id="meta-title">Cystenon – Естествена Подкрепа За Комфорта На Пикочните Пътища | 50% Отстъпка</title>
     <meta name="description" id="meta-desc" content="Cystenon: Модерна формула с растителни съставки за подкрепа на пикочната система и естествения баланс на организма." />
-    <meta name="keywords" content="Cystenon, пикочни пътища, комфорт, често уриниране, парене, натурална добавка, България, Хърватия" />
+    <meta name="keywords" content="Cystenon, пикочни пътища, дискомфорт, често уриниране, парене, натурална добавка" />
     <meta name="robots" content="index,follow" />
 
     <!-- UI Assets -->
@@ -35,14 +35,13 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
         .star-filled { color: #f59e0b; fill: #f59e0b; }
         
-        /* Fundo Visível */
         .hero-section-bg { 
             position: relative; 
             background-image: url('images/cystenon-fund.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            overflow: visible; 
+            overflow: visible; /* Necessário para o selo não cortar */
             min-height: 90vh; 
             display: flex; 
             align-items: center; 
@@ -83,11 +82,11 @@
         }
         .btn-shine:hover::after { left: 100%; top: 100%; }
 
-        /* Selo de desconto ajustado para não ser cortado */
+        /* Selo de desconto melhorado (estilo imagem de referência) */
         .discount-badge {
             position: absolute;
-            top: -25px;
-            right: -25px;
+            top: -30px;
+            right: -30px;
             width: 110px;
             height: 110px;
             background-color: #0284c7;
@@ -97,9 +96,10 @@
             align-items: center;
             justify-content: center;
             color: white;
-            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4);
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.5);
             z-index: 50;
             transform: rotate(12deg);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -147,24 +147,25 @@
                             <span class="text-xs font-bold text-gray-700" data-i18n="client-rating">⭐ 4.9 / 5 Оценка От Клиенти</span>
                         </div>
 
-                        <!-- HEADLINE -->
+                        <!-- HEADLINE - MELHORADO -->
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-[1.15] tracking-tight text-gray-900 drop-shadow-sm" data-i18n="h1">
                             Естествена Подкрепа За <span class="text-sky-600">Комфорта</span> На Пикочните Пътища
                         </h1>
                         
-                        <!-- SUBHEADLINE -->
+                        <!-- SUBHEADLINE - NATURALIZAÇÃO DA CÓPIA -->
                         <div class="space-y-4 mb-10">
                             <p class="text-lg md:text-xl text-gray-700 font-bold leading-relaxed max-w-lg" data-i18n="subhead-main">
                                 Подкрепете Ежедневния Комфорт На Пикочните Пътища С Модерна Формула От Растителни Съставки.
                             </p>
                             
+                            <!-- Gatilho de Conversão -->
                             <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-lg border-l-4 border-sky-400 pl-4 bg-sky-50/50 py-3 rounded-r-xl" data-i18n="conversion-phrasis">
                                 Много Жени В България Изпитват Дискомфорт В Пикочните Пътища. <br>
                                 <span class="font-bold text-sky-700">Cystenon Е Създаден Като Част От Ежедневната Грижа За Техния Комфорт.</span>
                             </p>
                         </div>
                         
-                        <!-- BENEFITS LIST -->
+                        <!-- BENEFITS LIST - MELHORADO -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mb-10 text-left">
                             <div class="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/20">
                                 <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
@@ -198,10 +199,11 @@
                         </div>
                     </div>
 
-                    <!-- Side Panel: CTA and Product (FLAGS ADDED, INITIALS REMOVED) -->
+                    <!-- Side Panel: CTA and Product (FLAGS INSTEAD OF INITIALS) -->
                     <div class="reveal relative">
-                        <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-gray-900/10 relative">
-                            <!-- Discount Badge -->
+                        <!-- Removida borda branca conforme pedido -->
+                        <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-gray-900/10 relative overflow-visible">
+                            <!-- Selo de Desconto (Corrigido para não ser cortado) -->
                             <div class="discount-badge">
                                 <span class="text-[10px] font-bold uppercase tracking-tighter" data-i18n="badge-off">ОТСТЪПКА</span>
                                 <span class="text-3xl font-black">50%</span>
@@ -218,26 +220,26 @@
                                 <div class="grid grid-cols-1 gap-4">
                                     <div class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1" data-i18n="choose-country">ИЗБЕРЕТЕ ДЪРЖАВА ЗА ДОСТАВКА:</div>
                                     
-                                    <!-- Bulgaria Button (Flag Emoticon Added) -->
+                                    <!-- Bulgaria Button (FLAGS ADDED) -->
                                     <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
-                                            <span class="text-3xl">🇧🇬</span>
+                                            <span class="text-4xl leading-none">🇧🇬</span>
                                             <span class="font-bold text-lg uppercase tracking-wide" data-i18n="country-bg">България</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
 
-                                    <!-- Croatia Button (Flag Emoticon Added) -->
+                                    <!-- Croatia Button (FLAGS ADDED) -->
                                     <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-between bg-gray-800 hover:bg-black text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
-                                            <span class="text-3xl">🇭🇷</span>
+                                            <span class="text-4xl leading-none">🇭🇷</span>
                                             <span class="font-bold text-lg uppercase tracking-wide" data-i18n="country-hr">Хърватия</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
                                 </div>
 
-                                <!-- Social Proof Text After Buttons -->
+                                <!-- Social Proof Text -->
                                 <div class="bg-sky-50/50 rounded-2xl p-4 border border-sky-100/30 mt-4 text-center">
                                     <p class="text-[11px] md:text-xs text-gray-600 leading-relaxed font-medium" data-i18n="users-count">
                                         Повече от <strong>2 000 000 потребители</strong> вече са избрали Cystenon като част от своята ежедневна грижа за пикочните пътища.
@@ -324,7 +326,7 @@
         window.addEventListener("load", reveal);
         reveal();
 
-        // TRANSLATION DICTIONARY (Bulgarian Default, auto-switch to Croatian)
+        // TRANSLATION DICTIONARY
         const translations = {
             bg: {
                 "stock": "В НАЛИЧНОСТ",
@@ -418,20 +420,20 @@
 
         const modalData = {
             terms: {
-                bg: { title: "Общи условия", content: "<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване. Продуктите са предназначени само за лична употреба.</p>" },
-                hr: { title: "Uvjeti korištenja", content: "<p>Kupnjom Cystenona prihvaćate naše standardne uvjete pružanja usluge. Proizvodi su namijenjeni samo za osobnu upotrebu.</p>" }
+                bg: { title: "Общи условия", content: "<p>С закупуването на Cystenon, Вие се съгласявате с нашите стандартни условия за обслужване.</p>" },
+                hr: { title: "Uvjeti korištenja", content: "<p>Kupnjom Cystenona prihvaćate naše standardne uvjete pružanja usluge.</p>" }
             },
             privacy: {
-                bg: { title: "Поверителност", content: "<p>Ние защитаваме Вашите данни с SSL криптиране. Вашата информация се използва само за обработка на поръчки и доставка.</p>" },
-                hr: { title: "Privatnost", content: "<p>Vaše podatke štitimo SSL enkripcijom. Vaši podaci koriste se samo za obradu narudžbe i dostavu.</p>" }
+                bg: { title: "Поверителност", content: "<p>Ние защитаваме Вашите данни с SSL криптиране.</p>" },
+                hr: { title: "Privatnost", content: "<p>Vaše podatke štitimo SSL enkripcijom.</p>" }
             },
             shipping: {
-                bg: { title: "Доставка", content: "<p>Доставката обикновено отнема 2-4 работни дни. Ще получите номер за проследяване по имейл.</p>" },
-                hr: { title: "Dostava", content: "<p>Dostava obično traje 2-4 radna dana. Broj za praćenje dobit ćete putem e-pošte.</p>" }
+                bg: { title: "Доставка", content: "<p>Доставката обикновено отнема 2-4 работни дни.</p>" },
+                hr: { title: "Dostava", content: "<p>Dostava obično traje 2-4 radna dana.</p>" }
             },
             returns: {
-                bg: { title: "Връщане", content: "<p>Предлагаме 30-дневна гаранция за удовлетвореност. Свържете се с поддръжката за подробности.</p>" },
-                hr: { title: "Povrati", content: "<p>Nudimo 30-dnevno jamstvo zadovoljstva. Kontaktirajte podršku za detalje o povratu.</p>" }
+                bg: { title: "Връщане", content: "<p>Предлагаме 30-дневна гаранция за удовлетвореност.</p>" },
+                hr: { title: "Povrati", content: "<p>Nudimo 30-dnevno jamstvo zadovoljstva.</p>" }
             }
         };
 
