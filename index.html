@@ -34,8 +34,8 @@
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #f0f7ff; 
-            color: #0f172a;
+            background-color: #f0fdf4; /* Fundo menta bem suave */
+            color: #064e3b;
             -webkit-font-smoothing: antialiased;
         }
         .star-filled { color: #f59e0b; fill: #f59e0b; }
@@ -51,14 +51,14 @@
             flex-direction: column;
         }
         
-        /* Overlay mais profundo para mobile para dar cor */
+        /* Overlay mais natural (Verde/Branco) */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, 
-                rgba(235, 248, 255, 0.98) 0%, 
-                rgba(224, 242, 254, 0.95) 50%, 
-                rgba(186, 230, 253, 0.8) 100%);
+                rgba(240, 253, 244, 0.98) 0%, 
+                rgba(240, 253, 244, 0.95) 50%, 
+                rgba(220, 252, 231, 0.8) 100%);
             z-index: 1;
         }
 
@@ -66,9 +66,10 @@
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        .brand-gradient { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); }
+        /* Cores Verde Esmeralda para congruência com "Natural" */
+        .brand-gradient { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+        .text-emerald-primary { color: #059669; }
         
-        /* Efeito de brilho no botão */
         .btn-shine {
             position: relative;
             overflow: hidden;
@@ -84,59 +85,58 @@
         }
         .btn-shine:active { transform: scale(0.96); }
 
-        /* Selo de desconto corrigido para mobile */
+        /* Selo de desconto em Verde */
         .discount-badge {
             position: absolute;
-            top: -20px;
-            right: -10px;
-            width: 85px;
-            height: 85px;
-            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            top: -15px;
+            right: -5px;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
             border-radius: 9999px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             color: white;
-            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4);
+            box-shadow: 0 10px 25px rgba(5, 150, 105, 0.4);
             z-index: 100;
             transform: rotate(12deg);
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         @media (min-width: 768px) {
-            .discount-badge { width: 120px; height: 120px; top: -40px; right: -25px; }
+            .discount-badge { width: 130px; height: 130px; top: -45px; right: -20px; }
         }
 
-        /* Card de compra mobile-first */
         .purchase-card {
             background: #ffffff;
             border-radius: 2.5rem;
             padding: 1.5rem;
-            box-shadow: 0 30px 60px -15px rgba(2, 132, 199, 0.2);
-            border: 1px solid rgba(2, 132, 199, 0.1);
+            box-shadow: 0 30px 60px -15px rgba(5, 150, 105, 0.15);
+            border: 1px solid rgba(5, 150, 105, 0.05);
         }
 
         @media (min-width: 768px) {
-            .purchase-card { border-radius: 3.5rem; padding: 3.5rem; }
+            .purchase-card { border-radius: 3.5rem; padding: 3rem; }
         }
 
         .benefit-tag {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(2, 132, 199, 0.15);
-            box-shadow: 0 4px 12px -2px rgba(2, 132, 199, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(5, 150, 105, 0.15);
+            box-shadow: 0 4px 12px -2px rgba(5, 150, 105, 0.05);
         }
     </style>
 </head>
 <body class="text-slate-900 relative overflow-x-hidden">
 
-    <header class="sticky top-0 bg-white/90 backdrop-blur-xl z-50 border-b border-sky-100">
+    <header class="sticky top-0 bg-white/90 backdrop-blur-xl z-50 border-b border-emerald-100">
         <div class="container mx-auto flex justify-between items-center py-3 px-5 md:px-10">
             <div class="flex items-center gap-2">
-                <div class="w-9 h-9 brand-gradient rounded-xl flex items-center justify-center shadow-lg shadow-sky-200">
+                <div class="w-9 h-9 brand-gradient rounded-xl flex items-center justify-center shadow-lg shadow-emerald-200">
                     <i data-feather="shield" class="text-white w-5 h-5"></i>
                 </div>
-                <span class="text-lg md:text-2xl font-black tracking-tight text-slate-900">Cystenon</span>
+                <span class="text-lg md:text-2xl font-black tracking-tight text-emerald-900">Cystenon</span>
             </div>
             <div>
                 <span class="text-[9px] md:text-xs font-black text-emerald-600 flex items-center gap-1.5 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100 uppercase tracking-widest">
@@ -153,8 +153,8 @@
             <div class="container mx-auto px-5 md:px-10 py-8 md:py-20 hero-container">
                 
                 <!-- 1. TÍTULO (O PRIMEIRO DA PÁGINA) -->
-                <div class="max-w-4xl mx-auto text-center reveal mb-10 md:mb-16">
-                    <div class="bg-white/80 backdrop-blur-md rounded-full px-4 py-1.5 mb-6 inline-flex items-center gap-2 shadow-sm border border-sky-100">
+                <div class="max-w-4xl mx-auto text-center reveal mb-8 md:mb-16">
+                    <div class="bg-white/80 backdrop-blur-md rounded-full px-4 py-1.5 mb-6 inline-flex items-center gap-2 shadow-sm border border-emerald-100">
                         <div class="flex items-center gap-0.5 text-amber-500">
                             <i class="star-filled w-3.5 h-3.5" data-feather="star"></i>
                             <i class="star-filled w-3.5 h-3.5" data-feather="star"></i>
@@ -162,44 +162,44 @@
                             <i class="star-filled w-3.5 h-3.5" data-feather="star"></i>
                             <i class="star-filled w-3.5 h-3.5" data-feather="star"></i>
                         </div>
-                        <div class="w-px h-3 bg-sky-200"></div>
-                        <span class="text-[10px] font-black text-sky-900" data-i18n="client-rating">4.9 / 5 Оценка От Клиенти</span>
+                        <div class="w-px h-3 bg-emerald-200"></div>
+                        <span class="text-[10px] font-black text-emerald-900" data-i18n="client-rating">4.9 / 5 Оценка От Клиенти</span>
                     </div>
 
-                    <h1 class="text-3xl md:text-7xl font-black mb-6 leading-tight tracking-tight text-slate-900" data-i18n="h1">
-                        Естествена Подкрепа За <span class="text-sky-600">Комфорта</span> На Пикочните Пътища
+                    <h1 class="text-3xl md:text-7xl font-black mb-6 leading-tight tracking-tight text-emerald-950" data-i18n="h1">
+                        Естествена Подкрепа За <span class="text-emerald-600">Комфорта</span> На Пикочните Пътища
                     </h1>
                     
-                    <p class="text-base md:text-2xl text-slate-600 font-bold leading-relaxed max-w-2xl mx-auto" data-i18n="subhead-main">
+                    <p class="text-base md:text-2xl text-emerald-800/80 font-bold leading-relaxed max-w-2xl mx-auto" data-i18n="subhead-main">
                         Подкрепете Ежедневния Комфорт На Пикочните Пътища С Модерна Формула От Растителни Съставки.
                     </p>
                 </div>
 
                 <!-- 2. CONTEXTO E BENEFÍCIOS -->
                 <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center mb-16 reveal">
-                    <div class="text-sm md:text-xl text-slate-700 leading-relaxed border-l-4 md:border-l-8 border-sky-500 pl-5 md:pl-8 bg-white/60 py-6 md:py-8 rounded-r-3xl shadow-lg shadow-sky-900/5 text-left" data-i18n="conversion-phrasis">
+                    <div class="text-sm md:text-xl text-emerald-900/70 leading-relaxed border-l-4 md:border-l-8 border-emerald-500 pl-5 md:pl-8 bg-white/60 py-6 md:py-8 rounded-r-3xl shadow-lg shadow-emerald-900/5 text-left" data-i18n="conversion-phrasis">
                         Много Жени В България Изпитват Дискомфорт В Пикочните Пътища. <br>
-                        <span class="font-black text-sky-700 text-base md:text-2xl mt-2 block">Cystenon Е Създаден Като Част От Ежедневната Грижа За Техния Комфорт.</span>
+                        <span class="font-black text-emerald-700 text-base md:text-2xl mt-2 block">Cystenon Е Създаден Като Част От Ежедневната Грижа За Техния Комфорт.</span>
                     </div>
 
                     <div class="grid grid-cols-1 gap-3">
                         <div class="benefit-tag flex items-center gap-4 p-4 rounded-2xl">
                             <div class="w-10 h-10 rounded-xl brand-gradient flex items-center justify-center flex-shrink-0 shadow-md">
-                                <i data-feather="activity" class="text-white w-5 h-5"></i>
+                                <i data-feather="heart" class="text-white w-5 h-5"></i>
                             </div>
-                            <span class="font-extrabold text-slate-800 text-xs md:text-lg" data-i18n="benefit-1">Подпомага Нормалния Комфорт На Пикочния Мехур</span>
+                            <span class="font-extrabold text-emerald-900 text-xs md:text-lg" data-i18n="benefit-1">Подпомага Нормалния Комфорт На Пикочния Мехур</span>
                         </div>
                         <div class="benefit-tag flex items-center gap-4 p-4 rounded-2xl">
                             <div class="w-10 h-10 rounded-xl brand-gradient flex items-center justify-center flex-shrink-0 shadow-md">
-                                <i data-feather="zap" class="text-white w-5 h-5"></i>
+                                <i data-feather="shield" class="text-white w-5 h-5"></i>
                             </div>
-                            <span class="font-extrabold text-slate-800 text-xs md:text-lg" data-i18n="benefit-2">Намалява усещането за парене</span>
+                            <span class="font-extrabold text-emerald-900 text-xs md:text-lg" data-i18n="benefit-2">Намалява усещането за парене</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. MÓDULO DE COMPRA (BOTOES NO FINAL DA SECAO) -->
-                <div class="reveal max-w-4xl mx-auto px-1">
+                <!-- 3. MÓDULO DE COMPRA (PRODUTO GRANDE E BOTOES NO FINAL) -->
+                <div class="reveal max-w-5xl mx-auto px-1">
                     <div class="purchase-card relative">
                         <!-- Selo de Desconto -->
                         <div class="discount-badge">
@@ -207,35 +207,36 @@
                             <span class="text-2xl md:text-5xl font-black">50%</span>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                            <!-- Imagem do Produto -->
-                            <div class="flex justify-center bg-sky-50 rounded-[2.5rem] p-6 border border-sky-100 shadow-inner">
-                                <div class="relative w-full max-w-[180px] md:max-w-[300px]">
-                                    <div class="absolute inset-0 bg-sky-400 blur-[50px] opacity-10 rounded-full"></div>
-                                    <img src="images/cystenon.png" alt="Cystenon Product" class="relative w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)]">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+                            <!-- Imagem do Produto (AUMENTADA PARA MOBILE) -->
+                            <div class="flex justify-center bg-emerald-50/50 rounded-[2.5rem] p-8 md:p-10 border border-emerald-100 shadow-inner">
+                                <div class="relative w-full max-w-[260px] md:max-w-[340px]">
+                                    <!-- Glow de destaque para o produto -->
+                                    <div class="absolute inset-0 bg-emerald-400 blur-[60px] opacity-20 rounded-full"></div>
+                                    <img src="images/cystenon.png" alt="Cystenon Product" class="relative w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
                                 </div>
                             </div>
 
-                            <!-- Seleção de País (Fim da Seção) -->
-                            <div class="space-y-6 md:space-y-8">
+                            <!-- Seleção de País (Final da Seção) -->
+                            <div class="space-y-8 md:space-y-10">
                                 <div class="text-center md:text-left">
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4 md:mb-6" data-i18n="choose-country">ИЗБЕРЕТЕ ДЪРЖАВА ЗА ДОСТАВКА:</p>
+                                    <p class="text-[10px] md:text-xs font-black text-emerald-900/40 uppercase tracking-[0.3em] mb-4 md:mb-6" data-i18n="choose-country">ИЗБЕРЕТЕ ДЪРЖАВА ЗА ДОСТАВКА:</p>
                                     
                                     <div class="grid grid-cols-1 gap-4">
                                         <!-- Botão Bulgária -->
-                                        <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-center brand-gradient text-white h-[60px] md:h-[75px] rounded-2xl shadow-xl shadow-sky-200/50">
-                                            <span class="font-black text-lg md:text-2xl uppercase tracking-widest" data-i18n="country-bg">България</span>
+                                        <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-center brand-gradient text-white h-[65px] md:h-[80px] rounded-2xl shadow-xl shadow-emerald-900/20">
+                                            <span class="font-black text-xl md:text-2xl uppercase tracking-widest" data-i18n="country-bg">България</span>
                                         </a>
 
                                         <!-- Botão Croácia -->
-                                        <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-center bg-slate-900 text-white h-[60px] md:h-[75px] rounded-2xl shadow-xl shadow-slate-900/20">
-                                            <span class="font-black text-lg md:text-2xl uppercase tracking-widest" data-i18n="country-hr">Хърватия</span>
+                                        <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-center bg-slate-900 text-white h-[65px] md:h-[80px] rounded-2xl shadow-xl shadow-slate-900/30">
+                                            <span class="font-black text-xl md:text-2xl uppercase tracking-widest" data-i18n="country-hr">Хърватия</span>
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="bg-emerald-50 rounded-2xl p-4 text-center border border-emerald-100">
-                                    <p class="text-[10px] md:text-sm text-emerald-700 font-bold flex items-center justify-center gap-2">
+                                <div class="bg-emerald-50/50 rounded-2xl p-5 text-center border border-emerald-100">
+                                    <p class="text-[11px] md:text-sm text-emerald-800 font-bold flex items-center justify-center gap-2">
                                         <i data-feather="users" class="w-4 h-4"></i>
                                         <span data-i18n="users-count">Повече от 2 000 000 потребители избраха Cystenon.</span>
                                     </p>
@@ -246,12 +247,12 @@
                 </div>
 
                 <!-- Trust Badges -->
-                <div class="mt-12 md:mt-16 flex justify-center gap-8 opacity-60 reveal">
-                    <div class="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-slate-500">
-                        <i data-feather="truck" class="w-4 h-4 text-sky-600"></i> <span data-i18n="shipping-fast">Бърза доставка</span>
+                <div class="mt-12 md:mt-16 flex justify-center gap-8 md:gap-12 opacity-60 reveal">
+                    <div class="flex items-center gap-2 text-[9px] md:text-xs font-black uppercase tracking-widest text-emerald-900/60">
+                        <i data-feather="truck" class="w-4 h-4 text-emerald-600"></i> <span data-i18n="shipping-fast">Бърза доставка</span>
                     </div>
-                    <div class="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-slate-500">
-                        <i data-feather="shield-check" class="w-4 h-4 text-sky-600"></i> <span data-i18n="packaging-discreet">Дискретна опаковка</span>
+                    <div class="flex items-center gap-2 text-[9px] md:text-xs font-black uppercase tracking-widest text-emerald-900/60">
+                        <i data-feather="shield-check" class="w-4 h-4 text-emerald-600"></i> <span data-i18n="packaging-discreet">Дискретна опаковка</span>
                     </div>
                 </div>
 
@@ -259,21 +260,22 @@
         </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16 border-t border-slate-800">
+    <footer class="bg-emerald-950 text-emerald-200/50 py-12 md:py-16 border-t border-emerald-900">
         <div class="container mx-auto px-6 text-center">
-            <div class="flex items-center justify-center gap-3 mb-6">
+            <div class="flex items-center justify-center gap-3 mb-8">
                 <div class="w-8 h-8 brand-gradient rounded-lg flex items-center justify-center">
                     <i data-feather="shield" class="text-white w-5 h-5"></i>
                 </div>
                 <span class="text-white font-black tracking-tighter text-xl">Cystenon</span>
             </div>
 
-            <div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-5 py-2 rounded-full mb-10">
-                <i data-feather="award" class="w-4 h-4 text-sky-400"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-100" data-i18n="distributor">Оторизиран глобален дистрибутор</span>
+            <!-- Distribuidor Autorizado Mais Discreto -->
+            <div class="flex items-center justify-center gap-2 mb-8 opacity-40 hover:opacity-100 transition-opacity">
+                <i data-feather="award" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span class="text-[10px] font-medium uppercase tracking-[0.15em] text-white" data-i18n="distributor">Оторизиран глобален дистрибутор</span>
             </div>
 
-            <div class="flex justify-center flex-wrap gap-6 md:gap-16 mb-12 text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500">
+            <div class="flex justify-center flex-wrap gap-6 md:gap-16 mb-12 text-[10px] md:text-xs font-bold uppercase tracking-widest text-emerald-200/60">
                 <button onclick="openModal()" class="hover:text-white transition-colors" data-i18n="link-terms">Общи условия</button>
                 <button onclick="openModal()" class="hover:text-white transition-colors" data-i18n="link-privacy">Поверителност</button>
                 <button onclick="openModal()" class="hover:text-white transition-colors" data-i18n="link-shipping">Доставка</button>
@@ -281,11 +283,11 @@
             </div>
 
             <div class="max-w-3xl mx-auto space-y-4 text-[9px] md:text-[11px] leading-relaxed">
-                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
-                    <p class="text-slate-200 font-black uppercase mb-2 tracking-widest" data-i18n="footer-compliance-title">ВАЖНО УТОЧНЕНИЕ (COMPLIANCE):</p>
+                <div class="bg-emerald-900/30 p-6 rounded-2xl border border-emerald-800/50">
+                    <p class="text-emerald-100 font-black uppercase mb-2 tracking-widest" data-i18n="footer-compliance-title">ВАЖНО УТОЧНЕНИЕ (COMPLIANCE):</p>
                     <p data-i18n="footer-compliance-p1">Този продукт е хранителна добавка. Не е предназначен за диагностика или лечение.</p>
                 </div>
-                <div class="opacity-60 font-bold">
+                <div class="opacity-40 font-bold">
                     <p data-i18n="footer-copy">© 2026 Cystenon Global Labs. Дистрибутирано от Fonslife Trading FZCO.</p>
                 </div>
             </div>
@@ -294,17 +296,17 @@
 
     <!-- MODAL -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-slate-950/90 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
+        <div class="fixed inset-0 bg-emerald-950/90 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4">
                 <div class="relative transform overflow-hidden rounded-[2.5rem] bg-white text-left shadow-2xl transition-all w-full max-w-2xl max-h-[80vh] flex flex-col">
-                    <div class="bg-white px-6 py-5 border-b border-slate-100 flex justify-between items-center sticky top-0 z-20">
-                        <h3 class="text-xl font-black text-slate-900" id="modal-title" data-i18n="modal-title">Правна Информация</h3>
-                        <button type="button" onclick="closeModal()" class="rounded-full p-2 bg-slate-100 text-slate-500">
+                    <div class="bg-white px-6 py-5 border-b border-emerald-100 flex justify-between items-center sticky top-0 z-20">
+                        <h3 class="text-xl font-black text-emerald-950" id="modal-title" data-i18n="modal-title">Правна Информация</h3>
+                        <button type="button" onclick="closeModal()" class="rounded-full p-2 bg-emerald-50 text-emerald-600">
                             <i data-feather="x" class="h-6 w-6"></i>
                         </button>
                     </div>
-                    <div class="bg-white px-8 py-8 overflow-y-auto text-sm leading-relaxed text-slate-600 font-medium">
+                    <div class="bg-white px-8 py-8 overflow-y-auto text-sm leading-relaxed text-emerald-900/70 font-medium">
                         <p>Kupnja proizvoda predstavlja suglasnost s uvjetima poslovanja. Proizvod je dodatak prehrani.</p>
                     </div>
                 </div>
@@ -331,9 +333,9 @@
             bg: {
                 "stock": "В НАЛИЧНОСТ",
                 "client-rating": "4.9 / 5 Оценка От Клиенти",
-                "h1": "Естествена Подкрепа За <span class='text-sky-600'>Комфорта</span> На Пикочните Пътища",
+                "h1": "Естествена Подкрепа За <span class='text-emerald-600'>Комфорта</span> На Пикочните Пътища",
                 "subhead-main": "Подкрепете Ежедневния Комфорт На Пикочните Пътища С Модерна Формула От Растителни Съставки.",
-                "conversion-phrasis": "Много Жени В България Изпитват Дискомфорт В Пикочните Пътища. <br><span class='font-extrabold text-sky-700'>Cystenon Е Създаден Като Част От Ежедневната Грижа За Техния Комфорт.</span>",
+                "conversion-phrasis": "Много Жени В България Изпитват Дискомфорт В Пикочните Пътища. <br><span class='font-extrabold text-emerald-700'>Cystenon Е Създаден Като Част От Ежедневната Грижа За Техния Комфорт.</span>",
                 "benefit-1": "Подпомага Нормалния Комфорт На Пикочния Мехур",
                 "benefit-2": "Намалява усещането за парене",
                 "shipping-fast": "Бърза доставка",
@@ -356,9 +358,9 @@
             hr: {
                 "stock": "NA ZALIHI",
                 "client-rating": "4.9 / 5 Ocjena Kupaca",
-                "h1": "Prirodna Podrška Za <span class='text-sky-600'>Udobnost</span> Mokraćnih Puteva",
+                "h1": "Prirodna Podrška Za <span class='text-emerald-600'>Udobnost</span> Mokraćnih Puteva",
                 "subhead-main": "Podržite Svakodnevnu Udobnost Mokraćnih Puteva Modernom Formulom Biljnih Sastojaka.",
-                "conversion-phrasis": "Mnoge Žene U Hrvatskoj Osjećaju Nelagodu U Mokraćnim Putevima. <br><span class='font-extrabold text-sky-700'>Cystenon Je Stvoren Kao Dio Svakodnevne Brige Za Njihovu Udobnost.</span>",
+                "conversion-phrasis": "Mnoge Žene U Hrvatskoj Osjećaju Nelagodu U Mokraćnim Putevima. <br><span class='font-extrabold text-emerald-700'>Cystenon Je Stvoren Kao Dio Svakodnevne Brige Za Njihovu Udobnost.</span>",
                 "benefit-1": "Pomaže Normalnu Udobnost Mjehura",
                 "benefit-2": "Smanjuje osjećaj peckanja",
                 "shipping-fast": "Brza dostava",
