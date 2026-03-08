@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -41,7 +41,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            overflow: hidden; 
+            overflow: visible; 
             min-height: 90vh; 
             display: flex; 
             align-items: center; 
@@ -89,6 +89,25 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
         }
+
+        /* Estilo para o selo de desconto (sem cortes) */
+        .discount-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: #0284c7;
+            border-radius: 9999px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4);
+            z-index: 50;
+            transform: rotate(12deg);
+        }
     </style>
 </head>
 <body class="text-gray-800 relative">
@@ -121,7 +140,7 @@
                     <div class="text-center md:text-left reveal flex flex-col items-center md:items-start">
                         
                         <!-- Social Proof Badge -->
-                        <div class="glass-panel rounded-full px-5 py-2 mb-8 inline-flex items-center gap-3 shadow-md mx-auto md:mx-0 border-white/50">
+                        <div class="glass-panel rounded-full px-5 py-2 mb-8 inline-flex items-center gap-3 shadow-md mx-auto md:mx-0">
                             <div class="flex items-center gap-1">
                                 <div class="flex items-center">
                                     <i class="star-filled w-4 h-4" data-feather="star"></i>
@@ -142,19 +161,25 @@
                         
                         <!-- SUBHEADLINE -->
                         <div class="space-y-4 mb-10">
-                            <p class="text-lg md:text-xl text-gray-700 font-semibold leading-relaxed max-w-lg">
-                                Подкрепете ежедневния комфорт на пикочната система с модерна формула от растителни съставки.
+                            <p class="text-lg md:text-xl text-gray-700 font-bold leading-relaxed max-w-lg">
+                                Подкрепете Ежедневния Комфорт На Пикочните Пътища С Модерна Формула От Растителни Съставки.
                             </p>
-                            <p class="text-base md:text-lg text-gray-500 leading-relaxed max-w-lg">
-                                Формула, разработена да подпомага нормалната функция на пикочните пътища и да поддържа естествения баланс на организма.
+                            
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-lg border-l-4 border-sky-400 pl-4 bg-sky-50/50 py-3 rounded-r-xl">
+                                Много Жени В България Изпитват Дискомфорт В Пикочните Пътища. <br>
+                                <span class="font-bold text-sky-700">Cystenon Е Създаден Като Част От Ежедневната Грижа За Техния Комфорт.</span>
                             </p>
                         </div>
                         
                         <!-- BENEFITS LIST -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mb-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mb-10 text-left">
                             <div class="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/20">
                                 <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
-                                <span class="font-medium text-gray-700 text-sm md:text-base">Подпомага комфорта на пикочния мехур</span>
+                                <span class="font-bold text-gray-800 text-sm md:text-base">Подпомага Нормалния Комфорт На Пикочния Мехур</span>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/20">
+                                <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
+                                <span class="font-medium text-gray-700 text-sm md:text-base">Намалява усещането за парене</span>
                             </div>
                             <div class="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/20">
                                 <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
@@ -162,15 +187,11 @@
                             </div>
                             <div class="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/20">
                                 <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
-                                <span class="font-medium text-gray-700 text-sm md:text-base">Формула с растителни съставки</span>
-                            </div>
-                            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/20">
-                                <i data-feather="check" class="text-sky-600 w-5 h-5 mt-1 flex-shrink-0"></i>
-                                <span class="font-medium text-gray-700 text-sm md:text-base">Подходяща за ежедневна употреба</span>
+                                <span class="font-medium text-gray-700 text-sm md:text-base">Забравете за честото уриниране</span>
                             </div>
                         </div>
 
-                        <!-- Trust Elements Below List -->
+                        <!-- Trust Elements -->
                         <div class="flex flex-wrap gap-6 justify-center md:justify-start opacity-70">
                             <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
                                 <i data-feather="truck" class="w-4 h-4 text-sky-600"></i> Бърза доставка
@@ -184,11 +205,11 @@
                         </div>
                     </div>
 
-                    <!-- Side Panel: CTA and Product -->
-                    <div class="reveal">
-                        <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-gray-900/5 relative overflow-hidden">
-                            <!-- Discount Badge -->
-                            <div class="absolute -top-4 -right-4 w-28 h-28 brand-bg rounded-full flex flex-col items-center justify-center text-white shadow-xl rotate-12 z-20">
+                    <!-- Side Panel: CTA and Product (Removed overflow-hidden and border) -->
+                    <div class="reveal relative">
+                        <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-gray-900/10 relative">
+                            <!-- Discount Badge (Corrected position) -->
+                            <div class="discount-badge">
                                 <span class="text-[10px] font-bold uppercase tracking-tighter">ОТСТЪПКА</span>
                                 <span class="text-3xl font-black">50%</span>
                             </div>
@@ -202,28 +223,30 @@
 
                             <div class="space-y-6 relative z-10">
                                 <div class="grid grid-cols-1 gap-4">
-                                    <div class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Изберете държава за доставка:</div>
+                                    <div class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">ИЗБЕРЕТЕ ДЪРЖАВА ЗА ДОСТАВКА:</div>
                                     
+                                    <!-- Bulgaria Button (Sigla removida, apenas bandeira) -->
                                     <a href="https://tl-track.com/tracker/vXsC" class="btn-shine flex items-center justify-between brand-bg hover:brightness-110 text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
                                             <span class="text-2xl">🇧🇬</span>
-                                            <span class="font-bold text-lg">България</span>
+                                            <span class="font-bold text-lg uppercase tracking-wide">България</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
 
+                                    <!-- Croatia Button (Sigla removida, apenas bandeira) -->
                                     <a href="https://tl-track.com/tracker/vXsF" class="btn-shine flex items-center justify-between bg-gray-800 hover:bg-black text-white px-8 py-5 rounded-2xl transition-all shadow-lg group">
                                         <div class="flex items-center gap-4 text-left">
                                             <span class="text-2xl">🇭🇷</span>
-                                            <span class="font-bold text-lg">Хърватия</span>
+                                            <span class="font-bold text-lg uppercase tracking-wide">Хърватия</span>
                                         </div>
                                         <i data-feather="chevron-right" class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                                     </a>
                                 </div>
 
-                                <!-- Social Proof Text After Buttons -->
-                                <div class="bg-sky-50/50 rounded-2xl p-4 border border-sky-100/50 mt-4">
-                                    <p class="text-xs text-gray-600 text-center leading-relaxed">
+                                <!-- Social Proof Text -->
+                                <div class="bg-sky-50/50 rounded-2xl p-4 border border-sky-100/30 mt-4">
+                                    <p class="text-[11px] md:text-xs text-gray-600 text-center leading-relaxed font-medium">
                                         Повече от <strong>2 000 000 потребители</strong> вече са избрали Cystenon като част от своята ежедневна грижа.
                                     </p>
                                 </div>
@@ -244,9 +267,9 @@
                             <div class="w-12 h-12 brand-bg/10 rounded-2xl flex items-center justify-center mb-6">
                                 <i data-feather="activity" class="text-sky-600 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-4">Натурална Формула</h3>
+                            <h3 class="text-xl font-bold mb-4">Намаляване на Дискомфорта</h3>
                             <p class="text-gray-600 leading-relaxed text-sm">
-                                Cystenon съдържа комбинация от растителни съставки, които традиционно се използват за подкрепа на нормалната функция на пикочните пътища.
+                                Cystenon съдържа комбинация от растителни съставки, които традиционно се използват за подкрепа на организма при парене и дискомфорт в пикочните пътища.
                             </p>
                         </div>
                         <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 benefit-card">
@@ -255,7 +278,7 @@
                             </div>
                             <h3 class="text-xl font-bold mb-4">Ежедневен Баланс</h3>
                             <p class="text-gray-600 leading-relaxed text-sm">
-                                Формулата е създадена за хора, които искат да поддържат ежедневен комфорт и баланс чрез силата на фитонутриентите.
+                                Формулата е създадена за хора, които искат да се справят с честото уриниране и да поддържат ежедневен комфорт чрез силата на фитонутриентите.
                             </p>
                         </div>
                     </div>
